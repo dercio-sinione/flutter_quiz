@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   int questionIndex = 0;
 
   void answerQuestion() {
-    questionIndex = questionIndex + 1;
+    questionIndex++;
     print('Answer chosen, $questionIndex');
   }
 
