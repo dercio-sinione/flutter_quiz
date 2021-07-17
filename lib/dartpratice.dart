@@ -1,3 +1,8 @@
+class Person {
+  String name = 'Dercio Derone';
+  int age = 21;
+}
+
 addNumbers(num num1, num num2) {
   return num1 + num2;
 }
