@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     var questions = [
       'What\'s your favorite color?',
-      'What\'s your favorite animal?'
-          'What\'s your favorite programming language?',
+      'What\'s your favorite animal?',
+      'What\'s your favorite programming language?',
     ];
     return MaterialApp(
       home: Scaffold(
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () => (print(questions[2])),
-              child: Text('Answer 2'),
+              child: Text('Answer 3'),
             ),
           ],
         ),
