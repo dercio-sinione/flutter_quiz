@@ -1,6 +1,8 @@
 void main() {
   var person = Person();
-  print(person.name);
+  person.name = 'Derone';
+  person.age = 21;
+  print('Hello $person.name, your age is $person.age');
 
   double firstResult = addNumbers(2, 4.5);
   double secondResult = addNumbers(15, 10.5);
@@ -11,8 +13,8 @@ void main() {
 }
 
 class Person {
-  String name = 'Dercio Derone';
-  int age = 21;
+  late String name;
+  late int age;
 }
 
 addNumbers(num num1, num num2) {
