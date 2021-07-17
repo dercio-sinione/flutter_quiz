@@ -24,10 +24,14 @@ class Person2 {
   late String name;
   late int age;
 
-  Person2({required String name, required int age}) {
-    this.name = name;
-    this.age = age;
-  }
+  // Constructors
+  // Person2({required String name, required int age}) {
+  //   this.name = name;
+  //   this.age = age;
+  // }
+
+  // Constructors
+  Person2({required this.name, required this.age});
 }
 
 addNumbers(num num1, num num2) {
