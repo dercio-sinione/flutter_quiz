@@ -1,14 +1,16 @@
-import 'dart:html';
-
 void main() {
   var person = Person();
   person.name = 'Derone';
   person.age = 21;
-  print('Hello $person.name, your age is $person.age');
 
-  if (person.age < 18) return;
-
-  continueProgram();
+  if (person.age < 18) {
+    print(
+        'Hello $person.name, you are not greater than 18 years, then you can not procede with this application!');
+  } else {
+    print(
+        'Hello $person.name, you are greater than 18 years, then you can procede with this application!');
+    continueProgram();
+  }
 }
 
 class Person {
