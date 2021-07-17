@@ -1,8 +1,8 @@
 void main() {
-  var person = Person();
-  // Person2 person = Person2('Dercio', 21);
-  person.name = 'Derone';
-  person.age = 21;
+  // var person = Person();
+  // person.name = 'Derone';
+  // person.age = 21;
+  Person2 person = Person2(name: 'Dercio Derone', age: 21);
 
   if (person.age < 18) {
     print(
@@ -24,9 +24,9 @@ class Person2 {
   late String name;
   late int age;
 
-  Person2({required String inputName, required int inputAge}) {
-    name = inputName;
-    age = inputAge;
+  Person2({required String name, required int age}) {
+    this.name = name;
+    this.age = age;
   }
 }
 
