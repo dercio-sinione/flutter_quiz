@@ -21,9 +21,13 @@ class Person {
 }
 
 class Person2 {
-  String name;
-  int age;
-  Person2(this.name, this.age);
+  late String name;
+  late int age;
+
+  Person2({required String inputName, required int inputAge}) {
+    name = inputName;
+    age = inputAge;
+  }
 }
 
 addNumbers(num num1, num num2) {
