@@ -1,5 +1,6 @@
 void main() {
   var person = Person();
+  // Person2 person = Person2('Dercio', 21);
   person.name = 'Derone';
   person.age = 21;
 
@@ -14,8 +15,15 @@ void main() {
 }
 
 class Person {
+  // late é um modificador de acesso
   late String name;
   late int age;
+}
+
+class Person2 {
+  String name;
+  int age;
+  Person2(this.name, this.age);
 }
 
 addNumbers(num num1, num num2) {
