@@ -1,3 +1,5 @@
+import 'dart:html';
+
 void main() {
   var person = Person();
   person.name = 'Derone';
@@ -6,7 +8,7 @@ void main() {
 
   if (person.age < 18) return;
 
-
+  continueProgram();
 }
 
 class Person {
@@ -18,7 +20,7 @@ addNumbers(num num1, num num2) {
   return num1 + num2;
 }
 
-void continueProgram(){
+void continueProgram() {
   double firstResult = addNumbers(2, 4.5);
   double secondResult = addNumbers(15, 10.5);
 
