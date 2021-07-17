@@ -24,15 +24,15 @@ class MyApp extends StatelessWidget {
           children: [
             Text('The Question!'),
             ElevatedButton(
-              onPressed: () => (print(questions[0])),
+              onPressed: () => print(questions[0]),
               child: Text('Answer 1'),
             ),
             ElevatedButton(
-              onPressed: () => (print(questions[1])),
+              onPressed: () => print(questions[1]),
               child: Text('Answer 2'),
             ),
             ElevatedButton(
-              onPressed: () => (print(questions[2])),
+              onPressed: () => print(questions[2]),
               child: Text('Answer 3'),
             ),
           ],
