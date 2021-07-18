@@ -6,13 +6,13 @@ import './buttonAnswer.dart';
 class Quiz extends StatelessWidget {
   final questionIndex;
   final questions;
-  final Function answerQuestion;
+  final Function fnAnswerQuestion;
 
   const Quiz(
       {Key? key,
       required this.questions,
       required this.questionIndex,
-      required this.answerQuestion})
+      required this.fnAnswerQuestion})
       : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class Quiz extends StatelessWidget {
       children: [
         Question(questions[questionIndex]['questionText']),
         ...(questions[questionIndex]['answers']).map((answer) {
-          return AnswerButton(answerQuestion, answer);
+          return AnswerButton(fnAnswerQuestion, answer);
         }),
       ],
     );

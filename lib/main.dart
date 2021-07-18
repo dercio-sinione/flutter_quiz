@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './question.dart';
 import './buttonAnswer.dart';
+import './quiz.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,7 +41,7 @@ class _MyAppState extends State<MyApp> {
 
   int _questionIndex = 0;
 
-  void _answerQuestion() {
+  void _fnAnswerQuestion() {
     setState(() {
       _questionIndex++;
     });
@@ -60,14 +61,10 @@ class _MyAppState extends State<MyApp> {
           title: Text('My First App'),
         ),
         body: _questionIndex < _questions.length
-            ? Column(
-                children: [
-                  Question(_questions[_questionIndex]['questionText']),
-                  ...(_questions[_questionIndex]['answers']).map((answer) {
-                    return AnswerButton(_answerQuestion, answer);
-                  }),
-                ],
-              )
+            ? Quiz(
+                questions: _questions,
+                questionIndex: _questionIndex,
+                fnAnswerQuestion: _fnAnswerQuestion)
             : Center(
                 child: Text('You did it!'),
               ),
