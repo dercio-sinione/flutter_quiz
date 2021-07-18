@@ -13,6 +13,31 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final List<Map<String, dynamic>> _questions = const [
+    {
+      'questionText': 'What\'s your favorite color?',
+      'answers': [
+        'Black',
+        'Red',
+        'Green',
+        'White',
+      ],
+    },
+    {
+      'questionText': 'What\'s your favorite animal?',
+      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion']
+    },
+    {
+      'questionText': 'What\'s your favorite Instructor?',
+      'answers': [
+        'Dércio Derone',
+        'Paulo Lopes',
+        'Anderson Francisco',
+        'Eduardo Jeremias'
+      ]
+    }
+  ];
+
   int _questionIndex = 0;
 
   void _answerQuestion() {
@@ -20,48 +45,32 @@ class _MyAppState extends State<MyApp> {
       _questionIndex++;
     });
     print('Answer chosen, $_questionIndex');
+    if (_questionIndex < _questions.length) {
+      print('You have more question!');
+    } else {
+      print('You have more question!');
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    List<Map<String, dynamic>> questions = [
-      {
-        'questionText': 'What\'s your favorite color?',
-        'answers': [
-          'Black',
-          'Red',
-          'Green',
-          'White',
-        ],
-      },
-      {
-        'questionText': 'What\'s your favorite animal?',
-        'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion']
-      },
-      {
-        'questionText': 'What\'s your favorite Instructor?',
-        'answers': [
-          'Dércio Derone',
-          'Paulo Lopes',
-          'Anderson Francisco',
-          'Eduardo Jeremias'
-        ]
-      }
-    ];
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('My First App'),
         ),
-        body: Column(
-          children: [
-            Question(questions[_questionIndex]['questionText']),
-            ...(questions[_questionIndex]['answers']).map((answer) {
-              return AnswerButton(_answerQuestion, answer);
-            }),
-          ],
-        ),
+        body: _questionIndex < _questions.length
+            ? Column(
+                children: [
+                  Question(_questions[_questionIndex]['questionText']),
+                  ...(_questions[_questionIndex]['answers']).map((answer) {
+                    return AnswerButton(_answerQuestion, answer);
+                  }),
+                ],
+              )
+            : Center(
+                child: Text('You did it!'),
+              ),
       ),
     );
   }
