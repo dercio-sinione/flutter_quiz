@@ -6,18 +6,18 @@ class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // implement createState
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
-  int questionIndex = 0;
+class _MyAppState extends State<MyApp> {
+  int _questionIndex = 0;
 
   void answerQuestion() {
     setState(() {
-      questionIndex++;
+      _questionIndex++;
     });
-    print('Answer chosen, $questionIndex');
+    print('Answer chosen, $_questionIndex');
   }
 
   @override
@@ -34,7 +34,7 @@ class MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions[questionIndex]),
+            Text(questions[_questionIndex]),
             ElevatedButton(
               child: Text('Answer 1'),
               onPressed: () => answerQuestion(),
