@@ -50,7 +50,6 @@ class _MyAppState extends State<MyApp> {
       }
     ];
 
-    // var res = questions[0]['questionText'];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -58,12 +57,15 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            // questions[0]['questionText']
             Question(questions[_questionIndex]['questionText']),
-            (questions[_questionIndex]['answers'] as List<String>).map((answer) {
-              return AnswerButton(answer);
+            ...(questions[_questionIndex]['answers']).map((answer) {
+              return AnswerButton(_answerQuestion, answer);
             }),
-            // AnswerButton(_answerQuestion),
+            // Old Style to map a dart map data type
+            // ...(questions[_questionIndex]['answers'] as List<String>)
+            //     .map((answer) {
+            //   return AnswerButton(_answerQuestion, answer);
+            // }).toList(),
           ],
         ),
       ),
