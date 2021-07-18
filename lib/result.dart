@@ -29,6 +29,11 @@ class Result extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           ),
+          Text(
+            'Final Score: $resultScore',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.normal),
+          ),
           TextButton(
             onPressed: () => fnResetQuiz(),
             child: Text('Restart Quiz'),
