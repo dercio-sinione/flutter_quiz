@@ -16,23 +16,64 @@ class _MyAppState extends State<MyApp> {
     {
       'questionText': 'What\'s your favorite color?',
       'answers': [
-        'Black',
-        'Red',
-        'Green',
-        'White',
+        {
+          'text': 'Black',
+          'score': 5,
+        },
+        {
+          'text': 'Red',
+          'score': 10,
+        },
+        {
+          'text': 'Green',
+          'score': 15,
+        },
+        {
+          'text': 'White',
+          'score': 20,
+        },
       ],
     },
     {
       'questionText': 'What\'s your favorite animal?',
-      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion']
+      'answers': [
+        {
+          'text': 'Rabbit',
+          'score': 10,
+        },
+        {
+          'text': 'Snake',
+          'score': 5,
+        },
+        {
+          'text': 'Elephant',
+          'score': 15,
+        },
+        {
+          'text': 'Lion',
+          'score': 20,
+        },
+      ]
     },
     {
       'questionText': 'What\'s your favorite Instructor?',
       'answers': [
-        'Dércio Derone',
-        'Paulo Lopes',
-        'Anderson Francisco',
-        'Eduardo Jeremias'
+        {
+          'text': 'Dércio Derone',
+          'score': 20,
+        },
+        {
+          'text': 'Paulo Lopes',
+          'score': 10,
+        },
+        {
+          'text': 'Anderson Francisco',
+          'score': 15,
+        },
+        {
+          'text': 'Eduardo Jeremias',
+          'score': 5,
+        },
       ]
     }
   ];
