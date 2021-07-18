@@ -61,11 +61,6 @@ class _MyAppState extends State<MyApp> {
             ...(questions[_questionIndex]['answers']).map((answer) {
               return AnswerButton(_answerQuestion, answer);
             }),
-            // Old Style to map a dart map data type
-            // ...(questions[_questionIndex]['answers'] as List<String>)
-            //     .map((answer) {
-            //   return AnswerButton(_answerQuestion, answer);
-            // }).toList(),
           ],
         ),
       ),
