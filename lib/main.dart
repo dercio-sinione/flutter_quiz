@@ -5,7 +5,7 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
+    // implement createState
     return MyAppState();
   }
 }
@@ -14,7 +14,9 @@ class MyAppState extends State<MyApp> {
   int questionIndex = 0;
 
   void answerQuestion() {
-    questionIndex++;
+    setState(() {
+      questionIndex++;
+    });
     print('Answer chosen, $questionIndex');
   }
 
