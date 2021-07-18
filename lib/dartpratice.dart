@@ -1,18 +1,18 @@
 void main() {
-  // var person = Person();
-  // person.name = 'Derone';
-  // person.age = 21;
-  // Person2 person = Person2(name: 'Dercio Derone', age: 21);
+  var person = Person();
+  person.name = 'Derone';
+  person.age = 21;
+  Person2 person = Person2(name: 'Dercio Derone', age: 21);
 
-  // if (person.age < 18) {
-  //   print(
-  //       'Hello $person.name, you are not greater than 18 years, then you can not procede with this application!');
-  // } else {
-  //   print(
-  //       'Hello $person.name, you are greater than 18 years, then you can procede with this application!');
-  //   continueProgram();
-  // }
-  mapObject();
+  if (person.age < 18) {
+    print(
+        'Hello $person.name, you are not greater than 18 years, then you can not procede with this application!');
+  } else {
+    print(
+        'Hello $person.name, you are greater than 18 years, then you can procede with this application!');
+    continueProgram();
+  }
+  // mapObject();
 }
 
 class Person {
