@@ -4,7 +4,7 @@ import './question.dart';
 import './buttonAnswer.dart';
 
 class Quiz extends StatelessWidget {
-  final questionIndex;
+  final int questionIndex;
   final questions;
   final Function fnAnswerQuestion;
 

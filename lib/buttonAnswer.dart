@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
-  final Function selectHandler;
+  final Function fnSelectHandler;
   final String answerText;
 
-  AnswerButton(this.selectHandler, this.answerText);
+  AnswerButton(this.fnSelectHandler, this.answerText);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class AnswerButton extends StatelessWidget {
       margin: EdgeInsets.only(top: 5),
       child: ElevatedButton(
         child: Text(answerText),
-        onPressed: () => selectHandler(),
+        onPressed: () => fnSelectHandler(),
       ),
     );
   }
