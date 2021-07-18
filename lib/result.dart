@@ -4,11 +4,25 @@ class Result extends StatelessWidget {
   final int resultScore;
   const Result(this.resultScore);
 
+  String get resultPhrase {
+    String resultText;
+    if (resultScore <= 20) {
+      resultText = 'You are awesome and innocent!';
+    } else if (resultScore <= 30) {
+      resultText = 'You were good in this game!';
+    } else if (resultScore <= 40) {
+      resultText = 'Pretty Good!';
+    } else {
+      resultText = 'You are the best!';
+    }
+    return resultText;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'You did it!',
+        resultPhrase,
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
       ),
