@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
-  const Result(this.resultScore);
+  final Function fnResetQuiz;
+  const Result(this.resultScore, this.fnResetQuiz);
 
   String get resultPhrase {
     String resultText;
@@ -28,7 +29,7 @@ class Result extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           ),
-          TextButton(onPressed: null, child: Text('Restart Quiz'))
+          TextButton(onPressed: () => fnResetQuiz, child: Text('Restart Quiz'))
         ],
       ),
     );
