@@ -30,7 +30,7 @@ class Result extends StatelessWidget {
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           ),
           TextButton(
-            onPressed: () => fnResetQuiz,
+            onPressed: () => fnResetQuiz(),
             child: Text('Restart Quiz'),
           )
         ],
