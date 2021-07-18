@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
+    List<Map<String, dynamic>> questions = [
       {
         'questionText': 'What\'s your favorite color?',
         'answers': [
@@ -50,6 +50,7 @@ class _MyAppState extends State<MyApp> {
       }
     ];
 
+    // var res = questions[0]['questionText'];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -57,7 +58,8 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(questions[_questionIndex]),
+            // questions[0]['questionText']
+            Question(questions[_questionIndex]['questionText']),
             AnswerButton(_answerQuestion),
             AnswerButton(_answerQuestion),
             AnswerButton(_answerQuestion),

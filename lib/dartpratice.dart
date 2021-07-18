@@ -2,16 +2,17 @@ void main() {
   // var person = Person();
   // person.name = 'Derone';
   // person.age = 21;
-  Person2 person = Person2(name: 'Dercio Derone', age: 21);
+  // Person2 person = Person2(name: 'Dercio Derone', age: 21);
 
-  if (person.age < 18) {
-    print(
-        'Hello $person.name, you are not greater than 18 years, then you can not procede with this application!');
-  } else {
-    print(
-        'Hello $person.name, you are greater than 18 years, then you can procede with this application!');
-    continueProgram();
-  }
+  // if (person.age < 18) {
+  //   print(
+  //       'Hello $person.name, you are not greater than 18 years, then you can not procede with this application!');
+  // } else {
+  //   print(
+  //       'Hello $person.name, you are greater than 18 years, then you can procede with this application!');
+  //   continueProgram();
+  // }
+  mapObject();
 }
 
 class Person {
@@ -45,4 +46,33 @@ void continueProgram() {
   print('First result: $firstResult');
   print('Second result: $secondResult');
   print('Total: ${firstResult + secondResult}');
+}
+
+void mapObject() {
+  var questions = [
+    {
+      'questionText': 'What\'s your favorite color?',
+      'answers': [
+        'Black',
+        'Red',
+        'Green',
+        'White',
+      ],
+    },
+    {
+      'questionText': 'What\'s your favorite animal?',
+      'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion']
+    },
+    {
+      'questionText': 'What\'s your favorite Instructor?',
+      'answers': [
+        'Dércio Derone',
+        'Paulo Lopes',
+        'Anderson Francisco',
+        'Eduardo Jeremias'
+      ]
+    }
+  ];
+
+  print(questions[0]['questionText']);
 }
