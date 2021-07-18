@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
+import './question.dart';
+
 class Quiz extends StatelessWidget {
   final questionIndex;
   final questions;
+  final Function answerQuestion;
 
-  const Quiz({Key? key, this.questions, this.questionIndex}) : super(key: key);
+  const Quiz(
+      {Key? key,
+      required this.questions,
+      required this.questionIndex,
+      required this.answerQuestion})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Question(_questions[_questionIndex]['questionText']),
-        ...(_questions[_questionIndex]['answers']).map((answer) {
-          return AnswerButton(_answerQuestion, answer);
+        Question(questions[questionIndex]['questionText']),
+        ...(questions[questionIndex]['answers']).map((answer) {
+          return AnswerButton(answerQuestion, answer);
         }),
       ],
     );
