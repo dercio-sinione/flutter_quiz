@@ -60,9 +60,10 @@ class _MyAppState extends State<MyApp> {
           children: [
             // questions[0]['questionText']
             Question(questions[_questionIndex]['questionText']),
-            AnswerButton(_answerQuestion),
-            AnswerButton(_answerQuestion),
-            AnswerButton(_answerQuestion),
+            (questions[_questionIndex]['answers'] as List<String>).map((answer) {
+              return AnswerButton(answer);
+            }),
+            // AnswerButton(_answerQuestion),
           ],
         ),
       ),
