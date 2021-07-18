@@ -6,7 +6,6 @@ import './buttonAnswer.dart';
 class Quiz extends StatelessWidget {
   final int questionIndex;
   final questions;
-  // final List<Map<String, dynamic>> questions;
   final Function fnAnswerQuestion;
 
   const Quiz(
