@@ -29,7 +29,16 @@ class Result extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           ),
-          TextButton(onPressed: () => fnResetQuiz, child: Text('Restart Quiz'))
+          TextButton(
+            onPressed: () => fnResetQuiz,
+            child: Text('Restart Quiz'),
+            autofocus: true,
+            style: ButtonStyle(
+              textStyle: MaterialStateProperty.all<TextStyle?>(
+                  TextStyle(color: Colors.red)),
+              shadowColor: MaterialStateProperty.all<Color>(Colors.red),
+            ),
+          )
         ],
       ),
     );
