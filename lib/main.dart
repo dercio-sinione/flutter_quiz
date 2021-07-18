@@ -87,6 +87,7 @@ class _MyAppState extends State<MyApp> {
       _questionIndex = 0;
       _totalScore = 0;
     });
+    print('Final score is $_totalScore');
   }
 
   void _fnAnswerQuestion(int score) {
@@ -94,12 +95,7 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _questionIndex++;
     });
-    print('Answer chosen, $_questionIndex');
-    if (_questionIndex < _questions.length) {
-      print('You have more question!');
-    } else {
-      print('You have more question!');
-    }
+    print('Your score is $_totalScore');
   }
 
   @override
