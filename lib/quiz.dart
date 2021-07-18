@@ -22,7 +22,8 @@ class Quiz extends StatelessWidget {
       children: [
         Question(questions[questionIndex]['questionText']),
         ...(questions[questionIndex]['answers']).map((answer) {
-          return AnswerButton(fnAnswerQuestion, answer);
+          return AnswerButton(
+              () => fnAnswerQuestion(answer['score']), answer['text']);
         }),
       ],
     );
