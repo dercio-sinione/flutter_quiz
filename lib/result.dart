@@ -32,12 +32,6 @@ class Result extends StatelessWidget {
           TextButton(
             onPressed: () => fnResetQuiz,
             child: Text('Restart Quiz'),
-            autofocus: true,
-            style: ButtonStyle(
-              textStyle: MaterialStateProperty.all<TextStyle?>(
-                  TextStyle(color: Colors.red)),
-              shadowColor: MaterialStateProperty.all<Color>(Colors.red),
-            ),
           )
         ],
       ),
