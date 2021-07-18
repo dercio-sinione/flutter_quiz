@@ -28,7 +28,7 @@ class Result extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           ),
-          TextButton(onPressed: null, child: Text('Restart'))
+          TextButton(onPressed: null, child: Text('Restart Quiz'))
         ],
       ),
     );
